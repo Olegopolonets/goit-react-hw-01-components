@@ -1,9 +1,9 @@
 import React from 'react';
-
+import s from './TransactionHistory.module.css';
 export function TransactionHistory({ transactions }) {
   return (
-    <section className="section-transactions">
-      <table className="transaction-history">
+    <section className={s.section}>
+      <table className={s.transactionHistory}>
         <thead>
           <tr>
             <th>Type</th>
@@ -14,7 +14,7 @@ export function TransactionHistory({ transactions }) {
 
         <tbody>
           {transactions.map(({ id, type, amount, currency }) => (
-            <tr key={id}>
+            <tr key={id} className={s.transactionRowBody}>
               <td>{type}</td>
               <td>{amount}</td>
               <td>{currency}</td>

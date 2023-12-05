@@ -9,7 +9,13 @@ export const FriendsList = ({ friends }) => {
           {friends.map(({ avatar, name, isOnline, id }) => {
             return (
               <li key={id} className={s.friendsItem}>
-                <span className={s.friendsStatus}>{isOnline}</span>
+                <span
+                  className={
+                    isOnline === true ? s.friendStatus : s.friendStatus2
+                  }
+                >
+                  {isOnline}
+                </span>
                 <img
                   src={avatar}
                   alt="friend avatar"

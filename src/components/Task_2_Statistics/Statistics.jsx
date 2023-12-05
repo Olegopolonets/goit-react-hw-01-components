@@ -11,8 +11,8 @@ export const Statistics = ({ title, stats }) => {
           {stats.map(({ id, label, percentage }) => {
             return (
               <li key={id} className={s.item}>
-                <span className="label">{label}</span>
-                <span className="percentage">{percentage}</span>
+                <span className={s.label}>{label}</span>
+                <span className={s.percentage}>{percentage}</span>
               </li>
             );
           })}
